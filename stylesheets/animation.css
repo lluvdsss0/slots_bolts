@@ -1,0 +1,208 @@
+#dataCam:after {
+  content: "01.02.2123";
+  animation: changeDataCam 1.5s steps(1, end) infinite;
+}
+@keyframes changeDataCam {
+  0%,
+  60% {
+    content: "01.02.2123";
+  }
+  60%,
+  65% {
+    content: "11.03.2123";
+  }
+  65%,
+  70% {
+    content: "01.02.2122";
+  }
+  70%,
+  75% {
+    content: "01.11.2123";
+  }
+  75%,
+  80% {
+    content: "01.02.2113";
+  }
+  80%,
+  85% {
+    content: "01.0#.21#3";
+  }
+  85%,
+  90% {
+    content: "01.02.#1&3";
+  }
+  90%,
+  100% {
+    content: "01.02.2123";
+  }
+}
+
+#timeCam:after {
+  content: "03:01:32";
+  animation: changeTimeCam 1.5s steps(1, end) infinite;
+  animation-delay: 1s;
+}
+@keyframes changeTimeCam {
+  0%,
+  60% {
+    content: "03:01:32";
+  }
+  60%,
+  65% {
+    content: "0#:#1:3#";
+  }
+  65%,
+  70% {
+    content: "@3:04:3*";
+  }
+  70%,
+  75% {
+    content: "03:0#:32";
+  }
+  75%,
+  80% {
+    content: "0$:11:32";
+  }
+  80%,
+  85% {
+    content: "00:00:00";
+  }
+  85%,
+  90% {
+    content: "0%:01:3@";
+  }
+  90%,
+  100% {
+    content: "03:01:32";
+  }
+}
+
+#textCam::after {
+  content: "ТОЛЬКО ДЛЯ РОБОТОВ";
+  animation: changeTextCam 2s steps(1, end) infinite;
+}
+
+@keyframes changeTextCam {
+  0% {
+    content: "ТОЛЬКО ДЛЯ РОБОТОВ";
+  }
+  10% {
+    content: "ТОЛЬКО ДЛЯ РОБОТОВ|";
+  }
+  15% {
+    content: "ТОЛЬКО ДЛЯ РОБОТО|";
+  }
+  25% {
+    content: "ТОЛЬКО ДЛЯ РОБОТО";
+  }
+  40% {
+    content: "ТОЛЬКО ДЛЯ РОБОТО|";
+  }
+  50% {
+    content: "ТОЛЬКО ДЛЯ РОБОТ|";
+  }
+  60% {
+    content: "ТОЛЬКО ДЛЯ РОБОТ";
+  }
+  70% {
+    content: "ТОЛЬКО ДЛЯ РОБО|";
+  }
+  80% {
+    content: "ТОЛЬКО ДЛЯ РОБО";
+  }
+  90% {
+    content: "ТОЛЬКО ДЛЯ РОБОТ|";
+  }
+  92% {
+    content: "ТОЛЬКО ДЛЯ РОБОТ";
+  }
+  94% {
+    content: "ТОЛЬКО ДЛЯ РОБОТО|";
+  }
+  96% {
+    content: "ТОЛЬКО ДЛЯ РОБОТОВ|";
+  }
+  100% {
+    content: "ТОЛЬКО ДЛЯ РОБОТОВ";
+  }
+}
+
+#slots::after {
+  content: "СЛОТЫ";
+  animation: changeSlots 1.5s steps(1, end) infinite;
+  animation-delay: 1s;
+}
+@keyframes changeSlots {
+  0%,
+  60% {
+    content: "СЛОТЫ";
+  }
+  60%,
+  65% {
+    content: "С#О@Ы";
+  }
+  65%,
+  70% {
+    content: "С&О*Ы";
+  }
+  70%,
+  75% {
+    content: "$$$$$";
+  }
+  75%,
+  80% {
+    content: "СЛ@@Ы";
+  }
+  80%,
+  85% {
+    content: "СЛ^ТЫ";
+  }
+  85%,
+  90% {
+    content: "СЛ@Т&";
+  }
+  90%,
+  100% {
+    content: "СЛОТЫ";
+  }
+}
+
+#bolts::after {
+  content: "БОЛТЫ";
+  animation: changeBolts 1.5s steps(1, end) infinite;
+  animation-delay: 1.2s;
+}
+@keyframes changeBolts {
+  0%,
+  60% {
+    content: "БОЛТЫ";
+  }
+  60%,
+  65% {
+    content: "БО@#Ы";
+  }
+  65%,
+  70% {
+    content: "Б@ЛТ&";
+  }
+  70%,
+  75% {
+    content: "$$$$$";
+  }
+  75%,
+  80% {
+    content: "Б$ОЛ*Ы";
+  }
+  80%,
+  85% {
+    content: "БО@@#";
+  }
+  85%,
+  90% {
+    content: "@@@@@";
+  }
+  90%,
+  100% {
+    content: "СЛОТЫ";
+  }
+}

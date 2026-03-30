@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets\style.css" />
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+        }
+    }
+</script>
+    <script type="module" src="three.js">
+    </script>
+    <script src="fortune.js" defer></script>
+    <script src="draw.js" defer></script>
+    <script src="close.js" defer></script>
+    <script src="maps.js" defer></script>
+    <script src="video.js" defer></script>
+    <script src="code.js" defer></script>
+    <title>Top-secret</title>
+  </head>
+
+  <body>
+
+    <!-- свечение -->
+<span class="lightning" id="lightning1">Х</span>
+<span class="lightning" id="lightning2">Х</span>
+<span class="lightning" id="lightning4">Х</span>
+<span class="lightning" id="lightning3">Х</span>
+
+    <!-- заголовок -->
+    <section class="casinoCam">
+      <video id="videoCasinoCam"
+    src="svg/video1.mp4" 
+    autoplay 
+    muted 
+    loop 
+    playsinline>
+  </video>
+  <div id="dark"></div>
+  <img id="gridCasinoCam" src="svg\gridCasinoCam.svg" alt="">
+      <div class="blackRectangles">
+        <div id="blackRectangle">
+          <div class="dataCam" id="dataCam"></div>
+          <div class="dataCam" id="timeCam"></div>
+        </div>
+        <div id="blackRectangle2">
+          <p class="dataCam" id="textCam"></p>
+        </div>
+      </div>
+      <div class="textsOnCam">
+        <div id="textCam1">
+          <p class="textOnCam" id="slots"></p>
+        </div>
+        <div id="textCam2">
+          <p class="textOnCam" id="and">И</p>
+          <p class="textOnCam" id="bolts"></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="textUnderBlock" id="textUnderCam">
+      <p class="slashUnder" id="slash1Cam">\</p>
+      <p class="slashUnder" id="slash2Cam">/</p>
+      <p class="textUnder" id="doNotTellCam">НЕ ГОВОРИТЕ О НАС ЛЮДЯМ</p>
+      <p class="slashUnder" id="slash3Cam">/</p>
+      <p class="slashUnder" id="slash4Cam">\</p>
+      <p class="textUnder" id="doNotLetThemCam">НЕ ДАЙТЕ ИМ УЗНАТЬ О НАС</p>
+    </div>
+
+    <div class="textUnderBlock" id="textAboveFortune">
+      <img class="krestBlock" id="krestAboveBlockFortune1" src="svg\krest.svg" alt=""></img>
+      <img class="arrow" id="arrow1AboveBlockFortune" src="svg\arrow.svg" alt="">
+      <p class="slashUnder" id="slash1AboveBlockFortune">/</p>
+      <p class="textUnder" id="winNewDetailsFortune">ВЫИГРЫВАЙ НОВЫЕ ДЕТАЛИ</p>
+      <p class="slashUnder" id="slash2AboveBlockFortune">/</p>
+      <p class="textUnder" id="putOnNewDetailsFortune">ПРИМЕРЬ НА СЕБЕ СВОЙ ПЕРВЫЙ ВЫИГРЫШ</p>
+      <img class="arrow" id="arrow2AboveBlockFortune" src="svg\arrow.svg" alt="">
+      <p class="slashUnder" id="slash3AboveBlockFortune">\</p>
+    </div>
+
+    <!-- колесо фортуны -->
+    <section class="fortune">
+      <img id="polygon" src="svg\polygon.svg" alt=""></img>
+      <div id="winRectangle"></div>
+      <div class="fortuneElements">
+      <div class="fortuneRectangle" id="app">
+
+      </div>
+    <div id="fortuneButton">КРУТИТЬ</div>
+     <div class="fortuneRectangle" id="fortuneRectangle2"></div>
+     <div id="statsDisplay"></div>
+     <div id="lineFortune"></div>
+     <div class="mainPricesFortune">
+      <div class="pricesFortune" id="pricesFortune1">
+       <div class="priceFortune" id="priceFortune1"></div>
+       <div class="priceFortune" id="priceFortune2"></div>
+      </div> 
+      <div class="pricesFortune" id="pricesFortune2">
+       <div class="priceFortune" id="priceFortune3"></div>
+        <div class="priceFortune" id="priceFortune4"></div>
+      </div>
+     </div>
+    </div>
+  
+    </section>
+    <div class="coffeeMachine"></div>
+
+    <div class="textUnderBlock" id="textUnderFortune">
+      <p class="slashUnder" id="slash1UnderBlockFortune">/</p>
+      <p class="textUnder" id="improveFortune">СОВЕРШЕНСТВУЙСЯ</p>
+      <p class="slashUnder" id="slash2UnderBlockFortune">/</p>
+      <img class="arrow" id="arrow1UnderBlockFortune" src="svg\arrow.svg" alt="">
+      <p class="textUnder" id="becomeStylishFortune">СТАНЬ СТИЛЕВЫМ УЖЕ СЕЙЧАС</p>
+      <p class="slashUnder" id="slash3UnderBlockFortune">\</p>
+      <img class="arrow" id="arrow2UnderBlockFortune" src="svg\arrow.svg" alt="">
+      <img class="krestBlock" id="krestUnderBlockFortune" src="svg\krest.svg" alt=""></img>
+    </div>
+
+    <section class="runningWrapper">
+    <div class="runningLine" id="runningLine1">
+      <!-- <div class="runningGrid"> -->
+        <!-- <img id="runningGrid1" src="svg\runningGrid.svg" alt="">
+        <img id="runningGrid2" src="svg\runningGrid.svg" alt=""> -->
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor11.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor12.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor13.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img iclass="decor" src="svg\decor14.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor15.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor16.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor11.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor12.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor13.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor14.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor15.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor16.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <div class="textUnderBlock" id="textAboveMaps">
+      <p class="slashUnder" id="slash1AboveMaps">/</p>
+      <img class="arrow" id="arrow1AboveMaps" src="svg\arrow.svg" alt="">
+      <p class="textUnder" id="youHereMaps">ОКАЗАЛСЯ ЗДЕСЬ? ТЫ УЖЕ НА ПУТИ К СОВЕРШЕНСТВОВАНИЮ!</p>
+      <p class="slashUnder" id="slash2AboveMaps">/</p>
+      <p class="textUnder" id="whereAreMaps">КАК ДО НАС ДОБРАТЬСЯ? ЛЕГКО!</p>
+      <img class="arrow" id="arrow2AboveMaps" src="svg\arrow.svg" alt="">
+      <p class="slashUnder" id="slash3AboveMaps">/</p>
+    </div>
+
+    <section class="maps">
+      <div class="nintendo" id="nintendoBlock1">
+        <span id="elemNintendo1">—</span>
+        <div id="bigCircleNintendo"></div>
+        <div class="circleNintendo" id="circleNintendo1">
+          <p class="arrowNintendo" id="arrowNintendo1">^</p>
+        </div>
+        <div class="circleNintendo" id="circleNintendo2">
+          <p class="arrowNintendo" id="arrowNintendo2">^</p>
+        </div>
+        <div class="circleNintendo" id="circleNintendo3">
+          <p class="arrowNintendo" id="arrowNintendo3">^</p>
+        </div>
+        <div class="circleNintendo" id="circleNintendo4">
+          <p class="arrowNintendo" id="arrowNintendo4">^</p>
+        </div>
+      </div>
+      <div class="contentMaps">
+        <img class="panorama current" src="svg/panorama1.png">
+      </div>
+      <img id="gridMaps" src="svg\gridMaps.svg"></img>
+      <div class="nintendo" id="nintendoBlock2">
+        <img id="krestMaps" src="svg\krestMaps.svg" alt="">
+        <div class="rectangleNintendo" id="rectangleNintendo1">
+          <p class="letterRectangle" id="w">W</p>
+        </div>
+        <div class="rectangleNintendo" id="rectangleNintendo2">
+          <p class="letterRectangle" id="a">A</p>
+        </div>
+        <div class="rectangleNintendo" id="rectangleNintendo3">
+          <p class="letterRectangle" id="d">D</p>
+        </div>
+        <div class="rectangleNintendo" id="rectangleNintendo4">
+          <p class="letterRectangle" id="s">S</p>
+        </div>
+        <div class="elementsMaps" id="elementMaps1"></div>
+        <div class="elementsMaps" id="elementMaps2"></div>
+        <div class="elementsMaps" id="elementMaps3"></div>
+        <span id="elemNintendo2">О</span>
+      </div>
+    </section>
+
+    <div class="textUnderBlock" id="textUnderMaps">
+      <p class="slashUnder" id="slash1UnderMaps">\</p>
+      <p class="textUnder" id="beAwaredMaps">БУДЬ БДИТЕЛЕН</p>
+      <img class="arrow" id="arrow1UnderMaps" src="svg\arrow.svg" alt="">
+      <p class="slashUnder" id="slash2UnderMaps">\</p>
+      <p class="textUnder" id="doNotBeMissedMaps">НЕ ПОТЕРЯЙСЯ</p>
+      <p class="slashUnder" id="slash3UnderMaps">/</p>
+      <p class="textUnder" id="doNotLeadMaps">НЕ ПРИВЕДИ ЧЕЛОВЕКА</p>
+      <img class="krestBlock" id="krestUnderMaps" src="svg\krest.svg" alt=""></img>
+    </div>
+
+    <section class="spamPopUps">
+
+      <div class="openImg" id="openImg1">
+        <div class="openImgMenu" id="openImgMenu1">
+          <p class="elemOpenImg">—</p>
+          <img class="krestOpenImg" src="svg\krestSpamFiles.svg" alt="">
+        </div>
+        <img class="openImgImg" src="svg/panoramaFiles3.png" alt="">
+      </div>
+
+<div class="openImg" id="openImg2">
+        <div class="openImgMenu" id="openImgMenu2">
+          <p class="elemOpenImg">—</p>
+          <img class="krestOpenImg" id="krestOpenImg2" src="svg\krestSpamFiles.svg" alt="">
+        </div>
+        <img class="openImgImg" id="openImgImg2" src="svg\photoFromCam.png" alt="">
+      </div>
+
+      <div class="openImg" id="openImg3">
+        <div class="openImgMenu" id="openImgMenu3">
+          <p class="elemOpenImg" id="elemOpenImg3">—</p>
+          <img class="krestOpenImg" id="krestOpenImg3" src="svg\krestSpamFiles.svg" alt="">
+        </div>
+        <img class="openImgImg" id="openImgImg3" src="svg\photoFromCam3.png" alt="">
+      </div>
+
+       <div class="openImg" id="openImg4">
+        <div class="openImgMenu" id="openImgMenu4">
+          <p class="elemOpenImg" id="elemOpenImg4">—</p>
+          <img class="krestOpenImg" id="krestOpenImg4" src="svg\krestSpamFiles.svg" alt="">
+        </div>
+        <img class="openImgImg" id="openImgImg4" src="svg\fightingCoffeeMachines.png" alt="">
+      </div>
+
+      <div class="openImg" id="openImg5">
+        <div class="openImgMenu" id="openImgMenu5">
+          <p class="menuText" id="error">Ошибка</p>
+          <p class="elemOpenImg" id="elemOpenImg5">—</p>
+          <img class="krestOpenImg" id="krestOpenImg5" src="svg\krestSpamFiles.svg" alt="">
+        </div>
+        <p class="menuText" id="deleteWeb">Хотите удалить сайт?</p>
+        <div id="deleteButton">
+          <p id="deleteText">Удалить</p>
+        </div>
+      </div>
+
+      <div class="openImg" id="openImg6">
+        <div class="openImgMenu" id="openImgMenu6">
+          <p class="elemOpenImg" id="elemOpenImg6">—</p>
+          <img class="krestOpenImg" id="krestOpenImg6" src="svg\krestSpamFiles.svg" alt="">
+        </div>
+        <img class="openImgImg" id="openImgImg6" src="svg\photoFromCam6.svg" alt="">
+      </div>
+
+      <div class="openImg" id="openImg8">
+        <div class="openImgMenu" id="openImgMenu8">
+          <p class="elemOpenImg" id="elemOpenImg8">—</p>
+          <img class="krestOpenImg" id="krestOpenImg8" src="svg\krestSpamFiles.svg" alt="">
+        </div>
+        <img class="openImgImg" id="openImgImg8" src="svg\photoFromCam8.svg" alt="">
+      </div>
+
+
+<div class="openImg" id="openImg7">
+        <div class="openImgMenu" id="openImgMenu7">
+          <p class="elemOpenImg" id="elemOpenImg7">—</p>
+          <img class="krestOpenImg" id="krestOpenImg7" src="svg\krestSpamFiles.svg" alt="">
+        </div>
+        <img class="openImgImg" id="openImgImg7" src="svg\brokenMicrowave.svg" alt="">
+      </div>
+
+      <div class="spamFiles">
+        <div class="spamRectangle1">
+          <img id="folder1" src="svg\folder.svg" alt="">
+          <p id="titleSpamFiles">К@м%ры виде^&на>>люд@~!ия</p>
+          <p id="elemSpamFiles">—</p>
+          <img id="krestSpamFolders" src="svg\krestSpamFiles.svg" alt="">
+        </div>
+        <div class="menuSpamFiles">
+          <p class="menuText" id="file"> <span class="underline">Ф</span>айл</p>
+          <p class="menuText" id="edit"><span class="underline">Р</span>едактировать</p>
+          <p class="menuText" id="view"><span class="underline">П</span>росмотр</p>
+          <p class="menuText" id="sort"><span class="underline">C</span>ортировать</p> 
+          <p class="menuText" id="slashMenu"><span class="underline">/</span></p>
+        </div>
+        <div class="lineSpamFiles" id="lineSpamFiles1"></div>
+        <div class="backNext">
+          <div class="back">
+            <img id="arrowBack" src="svg\arrow.svg" alt="">
+            <p id="backText">Назад</p>
+          </div>
+          <div class="next">
+            <img id="arrowNext" src="svg\arrow.svg" alt="">
+            <p id="nextText">Вперед</p>
+          </div>
+        </div>
+        <div class="lineSpamFiles" id="lineSpamFiles2">
+          <p class="search" id="searchText">Поиск</p>
+          <p class="search" id="randomText">227719@/29822.9002271.-9273382&@^.2029</p>
+        </div>
+        <div class="brokenImages">
+          <img class="brokemImgSpam" id="brokemImgSpam1" src="svg\brokenImg.svg" alt="">
+          <img class="brokemImgSpam" id="brokemImgSpam2"  src="svg\brokenImg.svg" alt="">
+          <img class="brokemImgSpam" id="brokemImgSpam3" src="svg\brokenImg.svg" alt="">
+          <img class="brokemImgSpam" id="brokemImgSpam4" src="svg\brokenImg.svg" alt="">
+          <img class="brokemImgSpam" id="brokemImgSpam5" src="svg\brokenImg.svg" alt="">
+          <img class="brokemImgSpam" id="brokemImgSpam6" src="svg\brokenImg.svg" alt="">
+          <img class="brokemImgSpam" id="brokemImgSpam7" src="svg\brokenImg.svg" alt="">
+          <img class="brokemImgSpam" id="brokemImgSpam8" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="spamText">
+         <p class="menuText" id="spam1">15.02.2123 09:20</p>
+         <p class="menuText" id="spam2">12.02.2123 23:09</p>
+         <p class="menuText" id="spam3">13.02.2123 04:20</p>
+         <p class="menuText" id="spam4">ДРАКА КОФЕМАШИН</p>
+         <p class="menuText" id="spam5">ПАРОЛИ</p>
+         <p class="menuText" id="spam6">14.02.2123 18:17</p>
+         <p class="menuText" id="spam7">СЛОМАННАЯ МИКРОВОЛНОВКА</p>
+         <p class="menuText" id="spam8">15.02.2123 09:20</p>
+        </div>
+        <div class="lineSpamFiles" id="lineSpamFiles3"></div>
+        <div class="elementsSpam">
+          <img src="svg\arrow.svg" alt="" id="arrowSpam">
+          <p class="slashUnder" id="slashSpam1">/</p>
+          <p class="slashUnder" id="slashSpam2">/</p>
+          <p class="slashUnder" id="slashSpam3">\</p>
+          <div id="verticalLineSpam"></div>
+          <p class="menuText" id="myCompSpam">Мой компьютер</p>
+        </div>
+      </div>
+
+      <div class="spamPhoto">
+       <div class="spamPhotoRec">
+          <img id="folder2" src="svg\folder.svg" alt="">
+          <p id="titleSpamPhoto">Р@зби>ая к*фем#ши$а</p>
+          <p id="elemSpamPhoto">—</p>
+          <img id="krestSpamPhoto" src="svg\krestSpamFiles.svg" alt="">
+       </div>
+       <img id="bluredCoffee" src="svg\bluredCoffee.svg" alt="">
+      </div>
+
+      <div class="spamCode">
+         <div class="spamCodeMenu">
+          <img id="folder3" src="svg\folder.svg" alt="">
+          <p id="titleSpamCode">По$лед^ие пр@игр#ыи</p>
+          <p id="elemSpamCode">—</p>
+          <img id="krestSpamCode" src="svg\krestSpamFiles.svg" alt="">
+       </div>
+       <div class="spamCodeElements">
+        <p class="slashUnder" id="slashCode1">/</p>
+        <img class="arrowCode" id="arrowCode1" src="svg\arrow.svg" alt="">
+        <p class="slashUnder" id="slashCode2">/</p>
+        <img class="arrowCode" id="arrowCode2" src="svg\arrow.svg" alt="">
+        <p class="slashUnder" id="slashCode3">/</p>
+       </div>
+       <img id="dots" src="svg\dots.svg" alt="">
+       <img id="metallicSpam" src="svg\metallicSpam.svg" alt="">
+      <div class="menuText" id="code">
+        
+</div>
+      </div>
+    </section>
+
+    <section class="runningWrapper">
+    <div class="runningLine" id="runningLine2">
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor21.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor22.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor23.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img iclass="decor" id="decor24" src="svg\decor24.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor25.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor26.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor21.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor22.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor23.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor24.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="brokenImg" src="svg\brokenImg.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor25.svg" alt="">
+        </div>
+        <div class="runningRectangle">
+          <img class="decor" src="svg\decor26.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <div class="textUnderBlock" id="textAboveDraw">
+      <img class="krestBlock" id="krestAboveDraw" src="svg\krest.svg" alt=""></img>
+      <img class="arrow" id="arrow1AboveDraw" src="svg\arrow.svg" alt="">
+      <p class="slashUnder" id="slash1AboveDraw">/</p>
+      <img class="arrow" id="arrow2AboveDraw" src="svg\arrow.svg" alt="">
+      <p class="textUnder" id="guessDraw">ОБВЕДИ КАРТИНКУ</p>
+      <p class="slashUnder" id="slash2AboveDraw">/</p>
+      <p class="textUnder" id="approveDraw">ПОДТВЕРДИ, ЧТО ТЫ РОБОТ, И УЗНАЙ ТОЧНУЮ ЛОКАЦИЮ!</p>
+      <p class="slashUnder" id="slash3AboveDraw">\</p>
+    </div>
+
+    <section class="draw">
+      <canvas id="canvas"></canvas>
+      <img id="gridDraw" src="svg\gridDraw.svg" alt="">
+      <img id="drawing" src="svg\drawing.svg" alt="">
+    </section>
+
+    <div class="textUnderBlock" id="textUnderDraw">
+      <p class="slashUnder" id="slash1UnderDraw">/</p>
+      <p class="textUnder" id="passTestDraw">ПРОЙДИ ПРОВЕРКУ</p>
+      <p class="slashUnder" id="slash2UnderDraw">/</p>
+      <img class="arrow" id="arrow1UnderDraw" src="svg\arrow.svg" alt="">
+      <p class="textUnder" id="realGamesDraw">СКОРО НАЧНУТСЯ РЕАЛЬНЫЕ ИГРЫ!</p>
+      <p class="slashUnder" id="slash3UnderDraw">\</p>
+      <img class="arrow" id="arrow2UnderDraw" src="svg\arrow.svg" alt="">
+      <p class="slashUnder" id="slash4UnderDraw">\</p>
+    </div>
+
+    <div class="textUnderBlock" id="textAboveFooter">
+      <p class="slashUnder" id="slash1AboveFooter">/</p>
+      <img class="krestBlock" id="krestAboveFooter" src="svg\krest.svg" alt=""></img>
+      <p class="textUnder" id="doNotTellFooter">НЕ ГОВОРИ О НАС ЛЮДЯМ</p>
+      <p class="slashUnder" id="slash2AboveFooter">/</p>
+      <p class="textUnder" id="topSecret">СОВЕРШЕННО СЕКРЕТНО</p>
+      <p class="textUnder" id="doNotLetFooter">НЕ ДАЙ ИМ УЗНАТЬ О НАС</p>
+      <p class="slashUnder" id="slash3AboveFooter">\</p>
+    </div>
+
+    <section class="footer">
+      <div class="studentTeacher">
+        <p class="menuText" id="student">Студент</p>
+        <p class="menuText" id="studentName">Кругликова Кристина</p>
+        <div id="lineStudentTeacher"></div>
+        <p class="menuText" id="teacher">Куратор</p>
+        <p class="menuText" id="teacherName">Цветников Николай</p>
+      </div>
+      <div id="lineFooter1"></div>
+      <div id="krestFooter1">
+        <img class="krestFooter" src="svg\krest.svg" alt="">
+        <img class="krestFooter" src="svg\krest.svg" alt="">
+      </div>
+      <div id="krestFooter2">
+        <img class="krestFooter" src="svg\krest.svg" alt="">
+        <img class="krestFooter" src="svg\krest.svg" alt="">
+      </div>
+      <div id="lineFooter2"></div>
+      <pre class="menuText" id="footerText"></pre>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,705 @@
+@media (max-width: 414px) {
+  /* основные параметры */
+  .body {
+    height: auto;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+  }
+
+  /* камеры */
+
+  #videoCasinoCam {
+    width: 100vw;
+    height: 83vw;
+  }
+
+  #dark {
+    width: 100vw;
+    height: 83vw;
+  }
+
+  #gridCasinoCam {
+    width: 400vw;
+    height: auto;
+    left: -250vw;
+    top: -13.5vw;
+  }
+
+  .blackRectangles {
+    flex-direction: column-reverse;
+    gap: 48vw;
+    margin-top: -70vw;
+  }
+
+  #blackRectangle {
+    align-items: center;
+    width: 77vw;
+    height: 7.7vw;
+    margin-left: 0vw;
+    top: -20vw;
+  }
+
+  #blackRectangle2 {
+    display: flex;
+    align-items: center;
+    width: 77vw;
+    height: 7.7vw;
+    margin-left: 22vw;
+  }
+
+  .dataCam {
+    font-size: 3vw;
+  }
+
+  #dataCam {
+    margin-left: 5vw;
+  }
+
+  #timeCam {
+    margin-left: 5vw;
+  }
+
+  .textOnCam {
+    font-size: 12.3vw;
+  }
+
+  #textCam {
+    margin-left: 11vw;
+  }
+
+  #textCam2 {
+    gap: 7vw;
+  }
+
+  .textsOnCam {
+    margin-top: -42vw;
+    margin-left: 5vw;
+  }
+
+  /* текст под камерой */
+
+  #textUnderCam {
+    margin-top: 63vw;
+  }
+
+  #slash1Cam {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash4Cam {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #doNotLetThemCam {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  .textUnder {
+    font-size: 2vw;
+  }
+
+  .slashUnder {
+    font-size: 2vw;
+  }
+
+  #slash2Cam {
+    margin-left: 2vw;
+  }
+
+  #doNotTellCam {
+    margin-left: 15vw;
+    white-space: nowrap;
+  }
+
+  #slash3Cam {
+    margin-left: 15vw;
+  }
+
+  #krestAboveBlockFortune1 {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #arrow1AboveBlockFortune {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #putOnNewDetailsFortune {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #arrow2AboveBlockFortune {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash3AboveBlockFortune {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash1AboveBlockFortune {
+    margin-left: 2vw;
+  }
+
+  #winNewDetailsFortune {
+    margin-left: 16.4vw;
+    white-space: nowrap;
+  }
+
+  #slash2AboveBlockFortune {
+    margin-left: 16.4vw;
+  }
+
+  #textAboveFortune {
+    margin-left: -7vw;
+    margin-top: 10vw;
+  }
+
+  /* колесо фортуны */
+
+  .fortuneElements {
+    flex-direction: column;
+    margin-top: -0.5vw;
+    gap: 10vw;
+  }
+
+  .fortuneRectangle {
+    width: 100vw;
+    height: 91vw;
+  }
+
+  .fortune {
+    height: 292vw;
+    width: 100vw;
+    margin-left: 0vw;
+    margin-top: 5vw;
+  }
+
+  .reel {
+    width: 33vw;
+    height: 91vw;
+  }
+
+  .strip {
+    gap: 33vw;
+  }
+
+  #polygon {
+    top: 150.5vw;
+    left: 0vw;
+    width: 20vw;
+    height: auto;
+  }
+
+  .coffeeMachine {
+    visibility: hidden;
+  }
+
+  #fortuneRectangle2 {
+    height: 166vw;
+  }
+
+  #statsDisplay {
+    font-size: 3vw;
+    line-height: 8vw;
+    top: 245.5vw;
+    left: 5vw;
+  }
+
+  #lineFortune {
+    width: 100vw;
+    top: 297.5vw;
+    min-height: 0.3vw;
+    left: 0vw;
+  }
+
+  .priceFortune {
+    width: 43vw;
+    height: 47vw;
+  }
+
+  .mainPricesFortune {
+    left: 5vw;
+    width: 90vw;
+    top: 304.5vw;
+    gap: 3vw;
+  }
+
+  .pricesFortune {
+    gap: 3vw;
+  }
+
+  #fortuneButton {
+    width: 100vw;
+    height: 15vw;
+    font-size: 3vw;
+  }
+
+  #winRectangle {
+    width: 100vw;
+    height: 34vw;
+    top: 144.5vw;
+    left: 0vw;
+  }
+
+  #slash1UnderBlockFortune {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #improveFortune {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #arrow1UnderBlockFortune {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #arrow2UnderBlockFortune {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #krestUnderBlockFortune {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash2UnderBlockFortune {
+    margin-left: -33vw;
+  }
+
+  #becomeStylishFortune {
+    margin-left: 11.5vw;
+    white-space: nowrap;
+  }
+
+  #slash3UnderBlockFortune {
+    margin-left: 11.5vw;
+  }
+
+  #textUnderFortune {
+    margin-top: -44vw;
+  }
+
+  .runningRectangle {
+    width: 36vw;
+    height: 36vw;
+  }
+
+  #runningLine1 {
+    margin-top: 27vw;
+  }
+
+  /* текст над картами */
+
+  #textAboveMaps {
+    margin-top: 27vw;
+  }
+
+  #slash1AboveMaps {
+    margin-left: 5vw;
+  }
+
+  #arrow1AboveMaps {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #youHereMaps {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #arrow2AboveMaps {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash2AboveMaps {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #whereAreMaps {
+    margin-left: -25vw;
+    white-space: nowrap;
+  }
+
+  .brokenImg {
+    width: 14.5vw;
+    height: auto;
+  }
+
+  .decor {
+    width: 29vw;
+    height: auto;
+  }
+
+  #slash3AboveMaps {
+    visibility: hidden;
+  }
+
+  #nintendoBlock2 {
+    visibility: hidden;
+  }
+
+  #bigCircleNintendo {
+    visibility: hidden;
+  }
+
+  #elemNintendo1 {
+    visibility: hidden;
+  }
+
+  .maps {
+    flex-direction: column-reverse;
+    margin-left: 0vw;
+    margin-top: -18vw;
+  }
+
+  .contentMaps {
+    width: 100vw;
+    height: 70vw;
+    margin-bottom: 10vw;
+  }
+
+  .nintendo {
+    width: 100vw;
+    height: 18vw;
+    border: 0.3vw solid #e9e9e9;
+  }
+
+  #gridMaps {
+    width: 100vw;
+    height: 70vw;
+    top: 18.5vw;
+    object-fit: cover;
+    left: 0vw;
+  }
+
+  .circleNintendo {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  #circleNintendo1 {
+    margin-top: -20vw;
+    margin-left: 5vw;
+    padding-bottom: 0vw;
+  }
+
+  #circleNintendo2 {
+    margin-top: -20vw;
+    margin-left: 28.3vw;
+  }
+
+  #circleNintendo3 {
+    margin-top: -20vw;
+    margin-left: 51.6vw;
+  }
+
+  #circleNintendo4 {
+    margin-top: -20vw;
+    margin-left: 74.9vw;
+  }
+
+  #arrow1UnderMaps {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #doNotBeMissedMaps {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash3UnderMaps {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #doNotLeadMaps {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #krestUnderMaps {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #beAwaredMaps {
+    white-space: nowrap;
+    margin-left: 26vw;
+  }
+
+  #slash1UnderMaps {
+    margin-left: 5vw;
+  }
+
+  #slash2UnderMaps {
+    margin-left: 21vw;
+  }
+
+  #textUnderMaps {
+    margin-top: 5vw;
+  }
+
+  .arrowNintendo {
+    font-size: 10vw;
+  }
+
+  #arrowNintendo1 {
+    margin-left: 6.5vw;
+    margin-top: 9vw;
+  }
+
+  #arrowNintendo2 {
+    margin-left: 9vw;
+    margin-top: 3vw;
+  }
+
+  #arrowNintendo3 {
+    margin-left: -8vw;
+    margin-top: 15vw;
+  }
+
+  #arrowNintendo4 {
+    margin-right: 6vw;
+    margin-top: 0.5vw;
+  }
+
+  #runningLine2 {
+    margin-top: 20vw;
+  }
+
+  .spamFiles {
+    visibility: hidden;
+  }
+
+  .spamCode {
+    visibility: hidden;
+  }
+
+  .spamPhoto {
+    width: 90vw;
+    height: 150vw;
+    margin-left: 5vw;
+    margin-top: -43vw;
+  }
+
+  .spamPhotoRec {
+    width: 90vw;
+    height: 10vw;
+  }
+
+  #folder2 {
+    width: 8vw;
+    height: auto;
+    margin-left: 2vw;
+  }
+
+  #titleSpamPhoto {
+    font-size: 3vw;
+    white-space: nowrap;
+    margin-left: 3vw;
+  }
+
+  #elemSpamPhoto {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #krestSpamPhoto {
+    width: 7vw;
+    height: auto;
+    margin-left: 14vw;
+  }
+
+  #bluredCoffee {
+    width: 90vw;
+    height: auto;
+    margin-left: 0vw;
+    margin-top: 25vw;
+  }
+
+  #runningLine2 {
+    margin-top: 0vw;
+  }
+
+  #krestAboveDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #arrow1AboveDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #arrow2AboveDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #approveDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash3AboveDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash1AboveDraw {
+    margin-left: -6.5vw;
+  }
+
+  #guessDraw {
+    white-space: nowrap;
+    margin-left: 19vw;
+  }
+
+  #slash2AboveDraw {
+    margin-left: 25vw;
+  }
+
+  #textAboveDraw {
+    margin-top: 30vw;
+  }
+
+  .draw {
+    width: 100vw;
+    margin-left: 0vw;
+    height: 170vw;
+    margin-top: -6vw;
+  }
+
+  #gridDraw {
+    width: 100vw;
+    height: 170vw;
+    object-fit: cover;
+  }
+
+  #drawing {
+    transform: rotate(90deg);
+    width: 160vw;
+    height: 90vw;
+    object-fit: cover;
+    margin-left: -35vw;
+    margin-top: 34vw;
+  }
+
+  #arrow1UnderDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #realGamesDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash3UnderDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #arrow2UnderDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash4UnderDraw {
+    visibility: hidden;
+    margin-left: 0vw;
+  }
+
+  #slash1UnderDraw {
+    margin-left: 5vw;
+  }
+
+  #passTestDraw {
+    white-space: nowrap;
+    margin-left: 24.5vw;
+  }
+
+  #slash2UnderDraw {
+    margin-left: 24.5vw;
+  }
+
+  #textUnderDraw {
+    margin-top: 5vw;
+  }
+
+  #textAboveFooter {
+    visibility: hidden;
+  }
+
+  #lineFooter1 {
+    visibility: hidden;
+  }
+
+  #krestFooter1 {
+    visibility: hidden;
+  }
+
+  #krestFooter2 {
+    visibility: hidden;
+  }
+
+  #lineFooter2 {
+    visibility: hidden;
+  }
+
+  #footerText {
+    visibility: hidden;
+  }
+
+  .footer {
+    height: 27vw;
+    margin-top: 0vw;
+    padding-bottom: 10vw;
+  }
+
+  #student {
+    margin-top: 3vw;
+    margin-left: 3vw;
+    font-size: 3vw;
+  }
+
+  #studentName {
+    font-size: 3vw;
+    margin-left: 3vw;
+    white-space: nowrap;
+  }
+
+  #teacher {
+    font-size: 3vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+  }
+
+  #teacherName {
+    font-size: 3vw;
+    white-space: nowrap;
+    margin-left: 3vw;
+  }
+
+  #lineStudentTeacher {
+    width: 96.8vw;
+    height: 0.3vw;
+    margin-left: 0vw;
+    margin-top: 3vw;
+  }
+}
