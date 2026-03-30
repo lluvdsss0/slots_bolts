@@ -1504,3 +1504,23 @@ body {
   width: 5.5vw;
   height: 5.5vw;
 }
+
+.textsOnCam:hover {
+  cursor: pointer;
+}
+
+.draw:hover {
+  cursor: crosshair;
+}
+
+.openImgMenu {
+  cursor: grab;
+}
+
+.circleNintendo {
+  cursor: pointer;
+}
+
+#fortuneButton {
+  cursor: pointer;
+}
